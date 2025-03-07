@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReConnect - Elderly Social Platform</title>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons@latest/dist/umd/lucide.min.js">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+      <div class="logo">
+        <i data-lucide="heart" class="logo-icon"></i>
+        <h1>ReConnect</h1>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button><i data-lucide="search"></i></button>
+      </div>
+      <div class="user-actions">
+        <div class="notifications">
+          <i data-lucide="bell"></i>
+          <span class="notification-badge">3</span>
+        </div>
+        <!-- <a href="#profile" class="user-profile"> -->
+        <div class="user-profile">  
+          <div class="avatar">FK</div>
+          <span class="username">Franko_Karis</span>
+        </div>  
+        <!-- </a> -->
+      </div>
+    </header>
+
+    <div class="main-container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li  class ="active" data-page="home">
+              <i data-lucide="home"></i>
+              <span>Home</span>
+            </li>
+            <li data-page="friends">
+              <i data-lucide="users"></i>
+              <span>Friends</span>
+            </li>
+            <li data-page="messages">
+              <i data-lucide="message-square"></i>
+              <span>Messages</span>
+            </li>
+            <li data-page="profile">
+              <i data-lucide="user"></i>
+              <span>Profile</span>
+            </li>
+            <li data-page="logout">
+              <i data-lucide="log-out"></i>
+              <span>Logout</span>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav">
+        <div class="nav-item active" data-page="home">
+          <i data-lucide="home"></i>
+          <span>Home</span>
+        </div>
+        <div class="nav-item" data-page="friends">
+          <i data-lucide="users"></i>
+          <span>Friends</span>
+        </div>
+        <div class="nav-item" data-page="messages">
+          <i data-lucide="message-square"></i>
+          <span>Messages</span>
+        </div>
+        <div class="nav-item" data-page="profile">
+          <i data-lucide="user"></i>
+          <span>Profile</span>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <main class="content">
+        
+        <!-- Home Page -->
+        <section id="home" class="page active">
+          <div class="welcome-section">
+            <h2>Welcome Back, Franko!</h2>
+            <p>It's great to see you again. Here's what's happening in your community today.</p>
+          </div>
+
+          <!-- Stories Section (Instagram-like) -->
+          <!-- <div class="stories-section">
+            <div class="story">
+              <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Your Story" class="story-avatar">
+              <span class="story-username">Your Story</span>
+            </div>
+            <div class="story">
+              <img src="https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Martha" class="story-avatar">
+              <span class="story-username">Martha</span>
+            </div>
+            <div class="story">
+              <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Robert" class="story-avatar">
+              <span class="story-username">Robert</span>
+            </div>
+            <div class="story">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Elizabeth" class="story-avatar">
+              <span class="story-username">Elizabeth</span>
+            </div>
+            <div class="story">
+              <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="John" class="story-avatar">
+              <span class="story-username">John</span>
+            </div>
+            <div class="story">
+              <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Susan" class="story-avatar">
+              <span class="story-username">Susan</span>
+            </div>
+          </div> -->
+
+          <div class="quick-actions">
+            <button class="action-button find-friends">
+              <i data-lucide="users"></i>
+              <span>Find Friends</span>
+            </button>
+            <button class="action-button join-events">
+              <i data-lucide="calendar"></i>
+              <span>Join Events</span>
+            </button>
+            <button class="action-button send-message">
+              <i data-lucide="message-square"></i>
+              <span>Send Message</span>
+            </button>
+          </div>
+
+          <!-- Daily Wellness Tip -->
+          <div class="content-section wellness-tip">
+            <div class="section-header">
+              <h3>Daily Wellness Tip</h3>
+            </div>
+            <div class="section-content">
+              <div class="wellness-content">
+                <div class="wellness-icon">
+                  <i data-lucide="heart-handshake"></i>
+                </div>
+                <div class="wellness-text">
+                  <h4>Stay Connected</h4>
+                  <p>Regular social interaction can boost your mood and cognitive health. Try to connect with at least one person every day!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="content-section upcoming-events">
+            <div class="section-header">
+              <h3>Upcoming Events</h3>
+            </div>
+            <div class="section-content">
+              <div class="event-list">
+                <div class="event-item">
+                  <div class="event-icon">
+                    <i data-lucide="coffee"></i>
+                  </div>
+                  <div class="event-details">
+                    <h4>Coffee Morning</h4>
+                    <p>Today, 10:00 AM • Community Center</p>
+                    <button class="view-details">View Details</button>
+                  </div>
+                </div>
+                <div class="event-item">
+                  <div class="event-icon">
+                    <i data-lucide="book-open"></i>
+                  </div>
+                  <div class="event-details">
+                    <h4>Book Club Meeting</h4>
+                    <p>Tomorrow, 2:00 PM • Library</p>
+                    <button class="view-details">View Details</button>
+                  </div>
+                </div>
+                <div class="event-item">
+                  <div class="event-icon">
+                    <i data-lucide="map"></i>
+                  </div>
+                  <div class="event-details">
+                    <h4>Walking Group</h4>
+                    <p>Friday, 9:00 AM • Park Entrance</p>
+                    <button class="view-details">View Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="see-all">See All Events <i data-lucide="chevron-right"></i></button>
+          </div> -->
+
+          <!-- Memory Flashback -->
+          <!-- <div class="content-section memory-flashback">
+            <div class="section-header">
+              <h3>Memory Flashback</h3>
+            </div>
+            <div class="section-content">
+              <div class="memory-content">
+                <div class="memory-date">
+                  <span>3 Years Ago Today</span>
+                </div>
+                <div class="memory-image">
+                  <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Garden Party Memory">
+                </div>
+                <div class="memory-caption">
+                  <p>Garden party with the neighborhood friends. What a wonderful day it was!</p>
+                </div>
+                <div class="memory-actions">
+                  <button class="memory-action"><i data-lucide="heart"></i> Like</button>
+                  <button class="memory-action"><i data-lucide="message-circle"></i> Comment</button>
+                  <button class="memory-action"><i data-lucide="share"></i> Share</button>
+                </div>
+              </div>
+            </div>
+            <button class="see-all">See More Memories <i data-lucide="chevron-right"></i></button>
+          </div> -->
+
+          <div class="content-section friend-suggestions">
+            <div class="section-header">
+              <h3>People You May Know</h3>
+            </div>
+            <div class="section-content">
+              <div class="friend-list">
+                <div class="friend-item">
+                  <img src="https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Martha Johnson">
+                  <h4>Martha Johnson</h4>
+                  <p>3 mutual friends</p>
+                  <button class="add-friend">Add Friend</button>
+                </div>
+                <div class="friend-item">
+                  <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Robert Davis">
+                  <h4>Robert Davis</h4>
+                  <p>2 mutual friends</p>
+                  <button class="add-friend">Add Friend</button>
+                </div>
+                <div class="friend-item">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Elizabeth Wilson">
+                  <h4>Elizabeth Wilson</h4>
+                  <p>5 mutual friends</p>
+                  <button class="add-friend">Add Friend</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-section recent-messages">
+            <div class="section-header">
+              <h3>Recent Messages</h3>
+            </div>
+            <div class="section-content">
+              <div class="message-list">
+                <div class="message-item">
+                  <div class="message-avatar">JS</div>
+                  <div class="message-content">
+                    <div class="message-header">
+                      <h4>John Smith</h4>
+                      <span class="time">2 hours ago</span>
+                    </div>
+                    <p>Looking forward to seeing you at the event!</p>
+                    <button class="reply">Reply</button>
+                  </div>
+                </div>
+                <div class="message-item">
+                  <div class="message-avatar">SB</div>
+                  <div class="message-content">
+                    <div class="message-header">
+                      <h4>Susan Brown</h4>
+                      <span class="time">Yesterday</span>
+                    </div>
+                    <p>Thank you for the birthday wishes!</p>
+                    <button class="reply">Reply</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="see-all">View All Messages <i data-lucide="chevron-right"></i></button>
+          </div>
+
+          <!-- Community Poll -->
+          <!-- <div class="content-section community-poll">
+            <div class="section-header">
+              <h3>Community Poll</h3>
+            </div>
+            <div class="section-content">
+              <div class="poll-question">
+                <h4>What activity would you like to see next month?</h4>
+                <div class="poll-options">
+                  <div class="poll-option">
+                    <input type="radio" id="option1" name="poll" value="cooking">
+                    <label for="option1">Cooking Class</label>
+                    <div class="poll-bar">
+                      <div class="poll-progress" style="width: 45%"></div>
+                      <span>45%</span>
+                    </div>
+                  </div>
+                  <div class="poll-option">
+                    <input type="radio" id="option2" name="poll" value="gardening">
+                    <label for="option2">Gardening Workshop</label>
+                    <div class="poll-bar">
+                      <div class="poll-progress" style="width: 30%"></div>
+                      <span>30%</span>
+                    </div>
+                  </div>
+                  <div class="poll-option">
+                    <input type="radio" id="option3" name="poll" value="dance">
+                    <label for="option3">Dance Night</label>
+                    <div class="poll-bar">
+                      <div class="poll-progress" style="width: 25%"></div>
+                      <span>25%</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="vote-button">Vote</button>
+              </div>
+            </div>
+          </div> -->
+        </section>
+
+        <!-- Friends Page -->
+        <section id="friends" class="page">
+          <div class="welcome-section">
+            <h2>Your Friends</h2>
+            <p>Connect with your friends and make new ones.</p>
+          </div>
+          
+          <!-- Friends Search and Filter -->
+          <div class="friends-search-container">
+            <div class="friends-search">
+              <i data-lucide="search"></i>
+              <input type="text" placeholder="Search friends..." id="friends-search-input">
+            </div>
+            <div class="friends-filter">
+              <select id="friends-filter-select">
+                <option value="all">All Friends</option>
+                <option value="recent">Recently Active</option>
+                <option value="nearby">Nearby</option>
+                <option value="birthday">Upcoming Birthdays</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Friends Tabs -->
+          <div class="friends-tabs">
+            <button class="friends-tab active" data-tab="all-friends">All Friends</button>
+            <button class="friends-tab" data-tab="pending-requests">Pending Requests <span class="request-count">3</span></button>
+            <button class="friends-tab" data-tab="suggestions">Suggestions</button>
+          </div>
+          
+          <!-- Friends List Container -->
+          <div class="friends-container">
+            <!-- All Friends Tab Content -->
+            <div class="friends-tab-content active" id="all-friends">
+              <div class="friends-grid">
+                <!-- Friend Card 1 -->
+                <div class="friend-card">
+                  <div class="friend-card-header">
+                    <div class="online-indicator active"></div>
+                    <div class="friend-actions">
+                      <button class="friend-action-btn"><i data-lucide="more-horizontal"></i></button>
+                      <div class="friend-action-dropdown">
+                        <button><i data-lucide="message-square"></i> Message</button>
+                        <button><i data-lucide="phone"></i> Call</button>
+                        <button class="danger"><i data-lucide="user-minus"></i> Unfriend</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="friend-card-avatar">
+                    <img src="https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Martha Johnson">
+                  </div>
+                  <div class="friend-card-info">
+                    <h3>Martha Johnson</h3>
+                    <p class="friend-status">Online now</p>
+                    <p class="friend-mutual"><i data-lucide="users"></i> 3 mutual friends</p>
+                  </div>
+                  <div class="friend-card-actions">
+                    <button class="primary-action"><i data-lucide="message-square"></i> Message</button>
+                    <button class="secondary-action"><i data-lucide="calendar"></i> Events</button>
+                  </div>
+                </div>
+                
+                <!-- Friend Card 2 -->
+                <div class="friend-card">
+                  <div class="friend-card-header">
+                    <div class="online-indicator"></div>
+                    <div class="friend-actions">
+                      <button class="friend-action-btn"><i data-lucide="more-horizontal"></i></button>
+                      <div class="friend-action-dropdown">
+                        <button><i data-lucide="message-square"></i> Message</button>
+                        <button><i data-lucide="phone"></i> Call</button>
+                        <button class="danger"><i data-lucide="user-minus"></i> Unfriend</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="friend-card-avatar">
+                    <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1& auto=format&fit=crop&w=256&q=80" alt="Robert Davis">
+                  </div>
+                  <div class="friend-card-info">
+                    <h3>Robert Davis</h3>
+                    <p class="friend-status">Last active 2 hours ago</p>
+                    <p class="friend-mutual"><i data-lucide="users"></i> 2 mutual friends</p>
+                  </div>
+                  <div class="friend-card-actions">
+                    <button class="primary-action"><i data-lucide="message-square"></i> Message</button>
+                    <button class="secondary-action"><i data-lucide="calendar"></i> Events</button>
+                  </div>
+                </div>
+                
+                <!-- Friend Card 3 -->
+                <div class="friend-card">
+                  <div class="friend-card-header">
+                    <div class="online-indicator"></div>
+                    <div class="friend-actions">
+                      <button class="friend-action-btn"><i data-lucide="more-horizontal"></i></button>
+                      <div class="friend-action-dropdown">
+                        <button><i data-lucide="message-square"></i> Message</button>
+                        <button><i data-lucide="phone"></i> Call</button>
+                        <button class="danger"><i data-lucide="user-minus"></i> Unfriend</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="friend-card-avatar">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Elizabeth Wilson">
+                  </div>
+                  <div class="friend-card-info">
+                    <h3>Elizabeth Wilson</h3>
+                    <p class="friend-status">Last active yesterday</p>
+                    <p class="friend-mutual"><i data-lucide="users"></i> 5 mutual friends</p>
+                  </div>
+                  <div class="friend-card-actions">
+                    <button class="primary-action"><i data-lucide="message-square"></i> Message</button>
+                    <button class="secondary-action"><i data-lucide="calendar"></i> Events</button>
+                  </div>
+                </div>
+                
+                <!-- Friend Card 4 -->
+                <div class="friend-card">
+                  <div class="friend-card-header">
+                    <div class="online-indicator active"></div>
+                    <div class="friend-actions">
+                      <button class="friend-action-btn"><i data-lucide="more-horizontal"></i></button>
+                      <div class="friend-action-dropdown">
+                        <button><i data-lucide="message-square"></i> Message</button>
+                        <button><i data-lucide="phone"></i> Call</button>
+                        <button class="danger"><i data-lucide="user-minus"></i> Unfriend</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="friend-card-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="John Smith">
+                  </div>
+                  <div class="friend-card-info">
+                    <h3>John Smith</h3>
+                    <p class="friend-status">Online now</p>
+                    <p class="friend-mutual"><i data-lucide="users"></i> 1 mutual friend</p>
+                  </div>
+                  <div class="friend-card-actions">
+                    <button class="primary-action"><i data-lucide="message-square"></i> Message</button>
+                    <button class="secondary-action"><i data-lucide="calendar"></i> Events</button>
+                  </div>
+                </div>
+                
+                <!-- Friend Card 5 -->
+                <div class="friend-card">
+                  <div class="friend-card-header">
+                    <div class="online-indicator"></div>
+                    <div class="friend-actions">
+                      <button class="friend-action-btn"><i data-lucide="more-horizontal"></i></button>
+                      <div class="friend-action-dropdown">
+                        <button><i data-lucide="message-square"></i> Message</button>
+                        <button><i data-lucide="phone"></i> Call</button>
+                        <button class="danger"><i data-lucide="user-minus"></i> Unfriend</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="friend-card-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Susan Brown">
+                  </div>
+                  <div class="friend-card-info">
+                    <h3>Susan Brown</h3>
+                    <p class="friend-status">Last active 3 days ago</p>
+                    <p class="friend-mutual"><i data-lucide="users"></i> 4 mutual friends</p>
+                  </div>
+                  <div class="friend-card-actions">
+                    <button class="primary-action"><i data-lucide="message-square"></i> Message</button>
+                    <button class="secondary-action"><i data-lucide="calendar"></i> Events</button>
+                  </div>
+                </div>
+                
+                <!-- Friend Card 6 -->
+                <div class="friend-card">
+                  <div class="friend-card-header">
+                    <div class="online-indicator active"></div>
+                    <div class="friend-actions">
+                      <button class="friend-action-btn"><i data-lucide="more-horizontal"></i></button>
+                      <div class="friend-action-dropdown">
+                        <button><i data-lucide="message-square"></i> Message</button>
+                        <button><i data-lucide="phone"></i> Call</button>
+                        <button class="danger"><i data-lucide="user-minus"></i> Unfriend</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="friend-card-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="James Wilson">
+                  </div>
+                  <div class="friend-card-info">
+                    <h3>James Wilson</h3>
+                    <p class="friend-status">Online now</p>
+                    <p class="friend-mutual"><i data-lucide="users"></i> 6 mutual friends</p>
+                  </div>
+                  <div class="friend-card-actions">
+                    <button class="primary-action"><i data-lucide="message-square"></i> Message</button>
+                    <button class="secondary-action"><i data-lucide="calendar"></i> Events</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Pending Requests Tab Content -->
+            <div class="friends-tab-content" id="pending-requests">
+              <div class="request-list">
+                <!-- Friend Request 1 -->
+                <div class="friend-request">
+                  <div class="request-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Michael Johnson">
+                  </div>
+                  <div class="request-info">
+                    <h3>Michael Johnson</h3>
+                    <p><i data-lucide="users"></i> 2 mutual friends</p>
+                    <p class="request-time">Sent 2 days ago</p>
+                  </div>
+                  <div class="request-actions">
+                    <button class="accept-request">Accept</button>
+                    <button class="decline-request">Decline</button>
+                  </div>
+                </div>
+                
+                <!-- Friend Request 2 -->
+                <div class="friend-request">
+                  <div class="request-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Patricia Clark">
+                  </div>
+                  <div class="request-info">
+                    <h3>Patricia Clark</h3>
+                    <p><i data-lucide="users"></i> 1 mutual friend</p>
+                    <p class="request-time">Sent 3 days ago</p>
+                  </div>
+                  <div class="request-actions">
+                    <button class="accept-request">Accept</button>
+                    <button class="decline-request">Decline</button>
+                  </div>
+                </div>
+                
+                <!-- Friend Request 3 -->
+                <div class="friend-request">
+                  <div class="request-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="David Miller">
+                  </div>
+                  <div class="request-info">
+                    <h3>David Miller</h3>
+                    <p><i data-lucide="users"></i> 4 mutual friends</p>
+                    <p class="request-time">Sent 1 week ago</p>
+                  </div>
+                  <div class="request-actions">
+                    <button class="accept-request">Accept</button>
+                    <button class="decline-request">Decline</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Suggestions Tab Content -->
+            <div class="friends-tab-content" id="suggestions">
+              <div class="friends-grid">
+                <!-- Suggestion Card 1 -->
+                <div class="friend-card suggestion-card">
+                  <div class="friend-card-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Jennifer Adams">
+                  </div>
+                  <div class="friend-card-info">
+                    <h3>Jennifer Adams</h3>
+                    <p class="friend-mutual"><i data-lucide="users"></i> 7 mutual friends</p>
+                    <p class="suggestion-reason">Based on your interests</p>
+                  </div>
+                  <div class="friend-card-actions">
+                    <button class="add-friend-btn"><i data-lucide="user-plus"></i> Add Friend</button>
+                    <button class="remove-suggestion"><i data-lucide="x"></i> Remove</button>
+                  </div>
+                </div>
+                
+                <!-- Suggestion Card 2 -->
+                <div class="friend-card suggestion-card">
+                  <div class="friend-card-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Richard Taylor">
+                  </div>
+                  <div class="friend-card-info">
+                    <h3>Richard Taylor</h3>
+                    <p class="friend-mutual"><i data-lucide="users"></i> 3 mutual friends</p>
+                    <p class="suggestion-reason">From your neighborhood</p>
+                  </div>
+                  <div class="friend-card-actions">
+                    <button class="add-friend-btn"><i data-lucide="user-plus"></i> Add Friend</button>
+                    <button class="remove-suggestion"><i data-lucide="x"></i> Remove</button>
+                  </div>
+                </div>
+                
+                <!-- Suggestion Card 3 -->
+                <div class="friend-card suggestion-card">
+                  <div class="friend-card-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Linda Harris">
+                  </div>
+                  <div class="friend-card-info">
+                    <h3>Linda Harris</h3>
+                    <p class="friend-mutual"><i data-lucide="users"></i> 5 mutual friends</p>
+                    <p class="suggestion-reason">From Book Club group</p>
+                  </div>
+                  <div class="friend-card-actions">
+                    <button class="add-friend-btn"><i data-lucide="user-plus"></i> Add Friend</button>
+                    <button class="remove-suggestion"><i data-lucide="x"></i> Remove</button>
+                  </div>
+                </div>
+                
+                <!-- Suggestion Card 4 -->
+                <div class="friend-card suggestion-card">
+                  <div class="friend-card-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Thomas White">
+                  </div>
+                  <div class="friend-card-info">
+                    <h3>Thomas White</h3>
+                    <p class="friend-mutual"><i data-lucide="users"></i> 2 mutual friends</p>
+                    <p class="suggestion-reason">From Walking Group</p>
+                  </div>
+                  <div class="friend-card-actions">
+                    <button class="add-friend-btn"><i data-lucide="user-plus"></i> Add Friend</button>
+                    <button class="remove-suggestion"><i data-lucide="x"></i> Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Messages Page -->
+        <section id="messages" class="page">
+          <div class="welcome-section">
+            <h2>Your Messages</h2>
+            <p>Stay in touch with your friends and family.</p>
+          </div>
+          
+          <div class="messages-container">
+            <!-- Messages Sidebar -->
+            <div class="messages-sidebar">
+              <div class="messages-search">
+                <i data-lucide="search"></i>
+                <input type="text" placeholder="Search messages..." id="messages-search-input">
+              </div>
+              
+              <div class="messages-tabs">
+                <button class="messages-tab active" data-tab="all-messages">All</button>
+                <button class="messages-tab" data-tab="unread-messages">Unread <span class="unread-count">2</span></button>
+              </div>
+              
+              <div class="conversation-list">
+                <!-- Conversation 1 - Active -->
+                <div class="conversation-item active" data-conversation="john-smith">
+                  <div class="conversation-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="John Smith">
+                    <div class="online-status active"></div>
+                  </div>
+                  <div class="conversation-info">
+                    <div class="conversation-header">
+                      <h3>John Smith</h3>
+                      <span class="conversation-time">2h</span>
+                    </div>
+                    <p class="conversation-preview">Looking forward to seeing you at the event!</p>
+                  </div>
+                </div>
+                
+                <!-- Conversation 2 - Unread -->
+                <div class="conversation-item unread" data-conversation="martha-johnson">
+                  <div class="conversation-avatar">
+                    <img src="../favicon.png" alt="Martha Johnson">
+                    <div class="online-status active"></div>
+                  </div>
+                  <div class="conversation-info">
+                    <div class="conversation-header">
+                      <h3>Martha Johnson</h3>
+                      <span class="conversation-time">3h</span>
+                    </div>
+                    <p class="conversation-preview">Did you see the photos from yesterday's event?</p>
+                    <span class="unread-badge">1</span>
+                  </div>
+                </div>
+                
+                <!-- Conversation 3 - Unread -->
+                <div class="conversation-item unread" data-conversation="robert-davis">
+                  <div class="conversation-avatar">
+                    <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Robert Davis">
+                    <div class="online-status"></div>
+                  </div>
+                  <div class="conversation-info">
+                    <div class="conversation-header">
+                      <h3>Robert Davis</h3>
+                      <span class="conversation-time">5h</span>
+                    </div>
+                    <p class="conversation-preview">I found a great article about gardening that you might enjoy.</p>
+                    <span class="unread-badge">2</span>
+                  </div>
+                </div>
+                
+                <!-- Conversation 4 -->
+                <div class="conversation-item" data-conversation="susan-brown">
+                  <div class="conversation-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Susan Brown">
+                    <div class="online-status"></div>
+                  </div>
+                  <div class="conversation-info">
+                    <div class="conversation-header">
+                      <h3>Susan Brown</h3>
+                      <span class="conversation-time">1d</span>
+                    </div>
+                    <p class="conversation-preview">Thank you for the birthday wishes!</p>
+                  </div>
+                </div>
+                
+                <!-- Conversation 5 -->
+                <div class="conversation-item" data-conversation="elizabeth-wilson">
+                  <div class="conversation-avatar">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="Elizabeth Wilson">
+                    <div class="online-status"></div>
+                  </div>
+                  <div class="conversation-info">
+                    <div class="conversation-header">
+                      <h3>Elizabeth Wilson</h3>
+                      <span class="conversation-time">2d</span>
+                    </div>
+                    <p class="conversation-preview">Are you coming to the book club meeting tomorrow?</p>
+                  </div>
+                </div>
+              </div>
+              
+              <button class="new-message-btn">
+                <i data-lucide="edit"></i>
+                <span>New Message</span>
+              </button>
+            </div>
+            
+            <!-- Messages Chat Area -->
+            <div class="messages-chat">
+              <!-- Chat Header -->
+              <div class="chat-header">
+                <div class="chat-user-info">
+                  <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="John Smith">
+                  <div>
+                    <h3>John Smith</h3>
+                    <p class="chat-status">Online now</p>
+                  </div>
+                </div>
+                <div class="chat-actions">
+                  <button class="chat-action-btn"><i data-lucide="phone"></i></button>
+                  <button class="chat-action-btn"><i data-lucide="video"></i></button>
+                  <button class="chat-action-btn"><i data-lucide="info"></i></button>
+                </div>
+              </div>
+              
+              <!-- Chat Messages -->
+              <div class="chat-messages">
+                <div class="message-date-divider">
+                  <span>Today</span>
+                </div>
+                
+                <!-- Received Message -->
+                <div class="message received">
+                  <div class="message-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="John Smith">
+                  </div>
+                  <div class="message-content">
+                    <div class="message-bubble">
+                      <p>Hello Franko! How are you doing today?</p>
+                    </div>
+                    <div class="message-info">
+                      <span class="message-time">10:15 AM</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Sent Message -->
+                <div class="message sent">
+                  <div class="message-content">
+                    <div class="message-bubble">
+                      <p>Hi John! I'm doing well, thank you. How about you?</p>
+                    </div>
+                    <div class="message-info">
+                      <span class="message-time">10:17 AM</span>
+                      <span class="message-status"><i data-lucide="check-check"></i></span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Received Message -->
+                <div class="message received">
+                  <div class="message-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="John Smith">
+                  </div>
+                  <div class="message-content">
+                    <div class="message-bubble">
+                      <p>I'm great! Just wanted to remind you about the community event this weekend. It's going to be at the park at 2 PM.</p>
+                    </div>
+                    <div class="message-info">
+                      <span class="message-time">10:20 AM</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Received Message with Image -->
+                <div class="message received">
+                  <div class="message-avatar">
+                    <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" alt="John Smith">
+                  </div>
+                  <div class="message-content">
+                    <div class="message-bubble">
+                      <div class="message-image">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Event Flyer">
+                      </div>
+                      <p>Here's the flyer for the event!</p>
+                    </div>
+                    <div class="message-info">
+                      <span class="message-time">10:22 AM</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Sent Message -->
+                <div class="message sent">
+                  <div class="message-content">
+                    <div class="message-bubble">
+                      <p>Thank you for the reminder! I'm looking forward to seeing you at the event!</p>
+                    </div>
+                    <div class="message-info">
+                      <span class="message-time">10:25 AM</span>
+                      <span class="message-status"><i data-lucide="check-check"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Chat Input -->
+              <div class="chat-input">
+                <button class="chat-input-btn"><i data-lucide="image"></i></button>
+                <button class="chat-input-btn"><i data-lucide="smile"></i></button>
+                <div class="chat-input-field">
+                  <input type="text" placeholder="Type a message..." id="message-input">
+                </div>
+                <button class="chat-send-btn"><i data-lucide="send"></i></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="profile" class="page">
+          <div class="welcome-section">
+            <h2>Profile Settings</h2>
+            <p>Manage your personal information and account settings.</p>
+          </div>
+
+          <div class="profile-container">
+            <!-- Profile Picture Section -->
+            <div class="profile-picture-section">
+              <div class="profile-picture-wrapper">
+                <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80" 
+                     alt="Profile Picture" 
+                     id="profile-picture">
+                <button class="change-picture-btn">
+                  <i data-lucide="camera"></i>
+                </button>
+                <input type="file" id="picture-upload" accept="image/*" hidden>
+              </div>
+              <p class="upload-hint">Click to change profile picture</p>
+            </div>
+
+            <!-- Profile Details Form -->
+            <div class="profile-details">
+              <form id="profile-form" class="profile-form">
+                <div class="form-group">
+                  <label for="fullname">Full Name</label>
+                  <input type="text" id="fullname" value="John Smith" class="form-input">
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" value="john.smith@example.com" class="form-input" disabled>
+                  <span class="input-hint">Email cannot be changed</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" id="username" value="johnsmith" class="form-input">
+                </div>
+
+                <div class="form-group">
+                  <label for="bio">Bio</label>
+                  <textarea id="bio" class="form-input" rows="4">I love connecting with people and sharing experiences.</textarea>
+                </div>
+
+                <div class="form-actions">
+                  <button type="button" class="btn-secondary">Cancel</button>
+                  <button type="submit" class="btn-primary">Save Changes</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Security Section -->
+            <div class="security-section">
+              <h3>Security</h3>
+              <form id="password-form" class="password-form">
+                <div class="form-group">
+                  <label for="current-password">Current Password</label>
+                  <input type="password" id="current-password" class="form-input">
+                </div>
+
+                <div class="form-group">
+                  <label for="new-password">New Password</label>
+                  <input type="password" id="new-password" class="form-input">
+                </div>
+
+                <div class="form-group">
+                  <label for="confirm-password">Confirm New Password</label>
+                  <input type="password" id="confirm-password" class="form-input">
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn-primary">Update Password</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="danger-zone">
+              <h3>Danger Zone</h3>
+              <p>Once you delete your account, there is no going back. Please be certain.</p>
+              <button class="btn-danger" id="delete-account">Delete Account</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Memory Lane Page -->
+        <section id="memory-lane" class="page">
+          <h2>Memory Lane</h2>
+          <p>Revisit cherished moments from the past.</p>
+          <div class="placeholder-content">
+            <p>Memory Lane content will be displayed here.</p>
+          </div>
+        </section>
+
+        <!-- Events Page -->
+        <section id="events" class="page">
+          <h2>Community Events</h2>
+          <p>Discover and join events in your community.</p>
+          <div class="placeholder-content">
+            <p>Events content will be displayed here.</p>
+          </div>
+        </section>
+
+        <!-- Help Page -->
+        <section id="help" class="page">
+          <h2>Help & Support</h2>
+          <p>Get assistance with using ReConnect.</p>
+          <div class="placeholder-content">
+            <p>Help content will be displayed here.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 ReConnect. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="script2.js"></script>  
+</body>
+</html>
