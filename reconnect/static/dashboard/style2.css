@@ -140,12 +140,13 @@
   
   .btn-danger {
     background: var(--danger);
+    background-color: #b0601f;
     color: var(--white);
     border: none;
   }
   
   .btn-danger:hover {
-    background: var(--danger-dark);
+    background: #59421d;
   }
   
   /* Security Section */

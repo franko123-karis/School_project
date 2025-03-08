@@ -109,6 +109,12 @@
         // Show loading state
         const content = document.querySelector('.content');
         content.classList.add('loading');
+
+        if (page === 'profile') {
+          document.getElementById('profile').style.display = 'block';
+        } else {
+          document.getElementById('profile').style.display = 'none';
+        }
   
         // Simulate page load
         setTimeout(() => {

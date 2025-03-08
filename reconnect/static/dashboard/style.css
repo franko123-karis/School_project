@@ -144,10 +144,15 @@
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
+
+  .user-actions a {
+    text-decoration: none;
+  }
   
   .user-profile {
     display: flex;
     align-items: center;
+    color: white;
     gap: 0.5rem;
     cursor: pointer;
     transition: transform 0.2s;
